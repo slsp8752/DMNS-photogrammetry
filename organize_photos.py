@@ -22,10 +22,13 @@ for index, address in enumerate(emails):
 	if not os.path.exists(subdirectory):
 		os.makedirs(subdirectory)
 	
+print get_date_taken(askopenfilename())
+
 for address, time in stamps.iteritems():
-	print address
 	print time
-	
+	# parse time
+	# compare to every photo taken that hasn't been sorted (?)
+	# 
 
 	
 	
