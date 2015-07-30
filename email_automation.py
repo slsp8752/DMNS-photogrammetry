@@ -10,8 +10,6 @@ from Tkinter import Tk
 from tkFileDialog import askopenfilename
 from tkFileDialog import askdirectory
 
-COMMASPACE = ', '
-
 # Credentials
 
 username = raw_input('Email: ')
