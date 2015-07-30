@@ -27,15 +27,16 @@ body = 'Thank you for visiting our exhibit. Attached below is a pdf file contain
 
 from_addr = msg['From']
 
-directory = askdirectory() # show an "Open" dialog box and return the path to the selected file
 Tk().withdraw() 
+directory = askdirectory() # show an "Open" dialog box and return the path to the selected file
 
 s = smtplib.SMTP('smtp.gmail.com:587')
 s.starttls()
 s.login(username,password)
 
 # Loop through all the email addresses and send out their respective files
-emails = [line.rstrip('\n') for line in open(askopenfilename)] # for each email address (one per line)
+emailsfull = [line.rstrip('\n') for line in open(askopenfilename())] # emails and timestamps
+emails = emailsfull[0::2]
 for address in emails:
 	for folder in os.listdir(directory):
 		if address == folder:
