@@ -10,6 +10,7 @@ def get_date_taken(path):
 	return Image.open(path)._getexif()[36867]
 	
 def split_timestamp(stamp):
+	print(stamp)
 	stamp_split = [str(item.strip()) for item in stamp.split(':')]
 	day_hour_split = stamp_split[2].split(' ')
 	day = day_hour_split[0]
@@ -18,6 +19,8 @@ def split_timestamp(stamp):
 	month = stamp_split[1]
 	minute = stamp_split[3]
 	second = stamp_split[4]
+	if(len(day) < 2):
+		day = "0" + day
 	split_list = [year, month, day, hour, minute, second]
 	return split_list
 	
@@ -28,43 +31,40 @@ def is_timestamp_greater(stamp_one, stamp_two):
 		print entry
 		print time_two_list[index]
 		if entry > time_two_list[index]:
+			print(entry + " is greater than " + time_two_list[index])
 			return 1
+		elif entry < time_two_list[index]:
+			return 0
 
 Tk().withdraw() 
 print("Location to put email folders")
-directory = askdirectory() # get location to put email folders
+email_directory = askdirectory() # get location to put email folders
 print("Location of emails.txt")
 emailsfull = [line.rstrip('\n') for line in open(askopenfilename())] # emails and timestamps
 emails = emailsfull[0::2]
 times = emailsfull[1::2]
 	
-stamps = {}
 for index, address in enumerate(emails):
-	stamps[address] = times[index]
-	subdirectory = os.path.join(directory, address)
+	subdirectory = os.path.join(email_directory, address)
 	if not os.path.exists(subdirectory):
 		os.makedirs(subdirectory)
 
-for address, time in stamps.iteritems():
-	
-	
-	# parse time
-	# compare to every photo taken that hasn't been sorted (?)
-	# 
 
-	
-	
-	
-	
-# for each email, create a folder
+iterate = 0
+print("Images Directory")
+images_directory = askdirectory()
+for item in os.listdir(images_directory):
+	print iterate
+	itempath = os.path.join(images_directory, item)
+	if os.path.isfile(itempath):
+		if (is_timestamp_greater(get_date_taken(itempath), times[iterate]) == 1):
+			print("Incrementing")
+			iterate += 1
+		outpath = os.path.join(email_directory, emails[iterate])
+		outfile = os.path.join(outpath, item)
+		if os.path.exists(outpath):
+			print("Moving")
+			os.rename(itempath, outfile)
+			
 
-# create a dictionary of emails and session end times?
-
-# for each email
-#    get session end timestamp
-#    compare against each of the photos ***that haven't been sorted***
-#    if images were taken before timestamp, store in email's folder
-#    else, nothing
-#    ***mark photos stored as sorted*** possibly by them being moved? 
-#
-#
+		
