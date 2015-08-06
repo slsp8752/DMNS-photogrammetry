@@ -40,7 +40,7 @@ agisoft_automation will then run through the entire workflow and export a 3D mod
 
 ###### email_automation.py
 Run email_automation.py with *python email_automation.py*
-**The email address automation must use a gmail email address as it is set up**
+**The email automation must use a gmail email address as it is set up**
 
 The script will prompt the following three things:
 1. A valid gmail address and password
