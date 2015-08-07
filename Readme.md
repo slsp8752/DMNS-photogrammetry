@@ -39,11 +39,11 @@ Run agisoft_automation.py by opening Agisoft PhotoScan (1.0 or later,) going to 
 
 The script then prompts for the folder containing the email named folders, which was specified in *prompt 1* of organize_photos.py
 
-agisoft_automation will then run through the entire workflow and export a 3D model for each set of pictures to ezch of the respective email named folders.
+agisoft_automation will then run through the entire workflow and export a 3D model for each set of pictures to each of the respective email named folders.
 
 ###### email_automation.py
 Run email_automation.py with *python email_automation.py*
-**The email automation must use a gmail email address as it is set up**
+**The email automation script currently only accepts google email addresses**
 
 The script will prompt the following three things:
 1. A valid gmail address and password
