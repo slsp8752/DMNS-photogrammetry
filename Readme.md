@@ -47,6 +47,7 @@ Run email_automation.py with *python email_automation.py*
 **The email automation script currently only accepts google email addresses**
 
 The script will prompt the following three things:
+
 1. A valid gmail address and password
 
 2. Again, the folder containing email named folders, specified in *prompt 1* of organize_photos.py
