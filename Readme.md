@@ -3,7 +3,7 @@
 
 ##### About the Project
 ###### Context
-This project was created as a part of CU-Boulder's Grand Challenge, a collaborative effort among educators, students, employees and the general public. The goal is to explore, understand, and influence how space-based science and technologies impact our daily lives, institutions and society. The Grand Challenge Event, where the project was presented, was hosted at the Denver Museum of Nature and Science.
+This project was created as a part of CU-Boulder's Grand Challenge, a collaborative effort among educators, students, employees and the general public. The goal of the Grand Challenge is to explore, understand, and influence how space-based science and technologies impact our daily lives, institutions and society. The Grand Challenge Event, where the project was presented, was hosted at the Denver Museum of Nature and Science.
 
 ###### Purpose
 The purpose of the scripts is to allow for several users to take sets of pictures (one person at a time,) organize them by email address, and construct/distribute personalized 3D models using Agisoft PhotoScan. The scripts are not linked in any concrete manner, so using each portion of the system for other purposes would be relatively simple.
