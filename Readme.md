@@ -57,3 +57,6 @@ The script will prompt the following three things:
 As set up currently, email_automation.py will attach any pdf files in the email named folders, which should be exclusively the model produced by agisoft_automation.
 
 Each model will be sent to its corresponding email address.
+
+##### Pictures
+Head over to http://slsp8752.github.io/DMNS-photogrammetry/ to check out images from the project!
