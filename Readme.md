@@ -25,8 +25,11 @@ This is set up for organize_photos.py to sort the photos based on what timeframe
 ######organize_photos.py
 Run organize_photos.py with *python organize_photos.py*
 The program will prompt for three things in the following order:
+
 1. The folder where you want to store the email-named folders that the program will create. Each email entered in the web form (listed in emails.txt) will get it's own folder inside the folder you specify. The folder you choose should be either **empty** or **a folder you've run the script with before.**
+
 2. The location of emails.txt. This is the file created by the web form that contains the email adresses and the timestamps associated with them.
+
 3. The folder containing the images you want to sort.
 
 The script will then run and organize the photos into their respective folders.
@@ -44,7 +47,9 @@ Run email_automation.py with *python email_automation.py*
 
 The script will prompt the following three things:
 1. A valid gmail address and password
+
 2. Again, the folder containing email named folders, specified in *prompt 1* of organize_photos.py
+
 3. The location of emails.txt
 
 As set up currently, email_automation.py will attach any pdf files in the email named folders, which should be exclusively the model produced by agisoft_automation.
