@@ -43,6 +43,7 @@ agisoft_automation will then run through the entire workflow and export a 3D mod
 
 ###### email_automation.py
 Run email_automation.py with *python email_automation.py*
+
 **The email automation script currently only accepts google email addresses**
 
 The script will prompt the following three things:
